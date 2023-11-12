@@ -6,30 +6,12 @@ using System.Threading.Tasks;
 
 namespace kursa4
 {
-    static public class Sorts
+    internal class ShellSort
     {
-        // простая сортировка вставками
-        //  array - массив, который нужно сортировать
-        static public uint InsertionSort(int[] array)
-        {
-            uint count = 0;
-            for (int i = 1; i < array.Length; i++)
-            {
-                for (int j = i; j > 0 && array[j] < array[j - 1]; j--)
-                {
-                    int temp = array[j];
-                    array[j] = array[j - 1];
-                    array[j - 1] = temp;
-                    count++;
-                }
-            }
-            return count;
-        }
-
         //  сортировка Шелла
         //  array - массив, который нужно сортировать
 
-        static public uint ShellSort(int[] array)
+        static public uint Sort(int[] array)
         {
             int h = 1;
             uint count = 0;
